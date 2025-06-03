@@ -5,12 +5,15 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-public class NileAir extends BaseClass{
+public class NileAir extends BaseClas {
 	public  NileAir() {
 		PageFactory.initElements(driver, this);
 	}
 	
 	@CacheLookup
+	@FindBy(className = "cookie-consent-banner-accept-button")
+	private WebElement Cookies;
+	
 	@FindBy(xpath="//a[contains(text(),'One Way')]")
 	private WebElement OneWay;
 	
@@ -20,6 +23,15 @@ public class NileAir extends BaseClass{
 	@FindBy(xpath="(//div[@class='ui-select-match'])[1]")
 	private WebElement FromsTwo;
 	
+	
+	public WebElement getCookies() {
+		return Cookies;
+	}
+
+	public void setCookies(WebElement cookies) {
+		Cookies = cookies;
+	}
+
 	public WebElement getFromsTwo() {
 		return FromsTwo;
 	}

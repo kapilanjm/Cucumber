@@ -12,6 +12,6 @@ Feature: Open the Nile Airlines
 		
 		Examples:
 		|Dates|
-		|2023-03-12|			
+		|2023-06-27|			
  	
       

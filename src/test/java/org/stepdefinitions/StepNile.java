@@ -16,6 +16,9 @@ public class StepNile extends NileAir {
 		browserLanuch("chrome");
 	    urlLaunch("https://www.nileair.com/#/en/home");
 		time(10);
+		n=new NileAir();
+		jsClick(n.getCookies());
+		
 	}
 
 	@When("To check the click flight tickets booking")
@@ -24,7 +27,6 @@ public class StepNile extends NileAir {
 		jsTrue(n.getOneWay());
 		clickTar(n.getOneWay());
 		Thread.sleep(3000);
-		
 	}
 
 	@When("To check the select a region from and to")
@@ -54,7 +56,6 @@ public class StepNile extends NileAir {
 		jsClick(n.getAdults());
 		selectByIndex(n.getAdults(), 4);
 		jsClick(n.getSubmit());
-	
 	}
 	
 	@When("To check Covid alert box and accept")
